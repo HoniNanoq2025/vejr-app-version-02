@@ -9,10 +9,9 @@ export default function WeatherWarning() {
         <Text style={styles.title}>ACTIVE ADVISORIES</Text>
       </View>
       <LinearGradient
-        key={i}
         colors={["#C8FF00", "transparent"]}
         start={{ x: 0, y: 0 }}
-        end={{ x: 1, y: 1 }}
+        end={{ x: 0.5, y: 2 }}
         style={styles.alertBox}
       >
         <View style={styles.leftSide}>
@@ -39,7 +38,7 @@ export default function WeatherWarning() {
 const styles = StyleSheet.create({
   container: {
     width: "100%",
-    marginVertical: 10,
+    marginVertical: 20,
     alignItems: "center",
     paddingHorizontal: 20,
   },

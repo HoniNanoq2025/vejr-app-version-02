@@ -1,6 +1,7 @@
 import { StyleSheet, Text, View, ScrollView } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import WeatherAccordionList from "../../components/features/WeatherAccordionList";
+import WeatherWarning from "../../components/features/WeatherWarning";
 
 export default function Forecast() {
   return (
@@ -10,6 +11,7 @@ export default function Forecast() {
           <Text style={styles.title}>7-day forecast</Text>
         </View>
         <WeatherAccordionList />
+        <WeatherWarning />
       </ScrollView>
     </SafeAreaView>
   );
@@ -19,6 +21,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#111",
+    paddingBottom: 40,
   },
   header: {
     width: "100%",
