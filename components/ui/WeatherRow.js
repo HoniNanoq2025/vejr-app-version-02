@@ -5,6 +5,7 @@ import Animated, {
   useAnimatedStyle,
   withSpring,
 } from "react-native-reanimated";
+import * as Haptics from "expo-haptics";
 import { Ionicons } from "@expo/vector-icons";
 import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
 
@@ -92,6 +93,9 @@ export default function WeatherRow({ item, isActive = false }) {
 
   const toggle = () => {
     const next = !open;
+
+    // Haptic feedback
+    Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
 
     setOpen(next);
 
